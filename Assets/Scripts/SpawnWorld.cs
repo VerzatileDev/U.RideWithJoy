@@ -2,22 +2,21 @@
 
 public class SpawnWorld : MonoBehaviour
 {
-    public float WorldElementSpeed = 5f;
-    private float WorldleftEdge; // Screen Space Defined to Destroy GameObject
+    public GameObject prefab; // Change this to private and serialie later on !!
+    //public GameObject prefab2;
+    Quaternion rotation = Quaternion.Euler(-90, 0, 0); // Rotates the Object Before spawning.
+    public float TimeToStartFromSpawnRate = 0f;
+    public float TimeToNextSpawn = 10f;
 
-    private void Start()
+
+    private void OnEnable()
     {
-        WorldleftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 60; // -1 pushing to make sure it goes off screen fully.
+        InvokeRepeating(nameof(Spawn), TimeToStartFromSpawnRate, TimeToNextSpawn);// Needs a provided Method.
     }
 
-    // Update Movement of the World !
-    void Update()
+    private void Spawn() // Spawns The Set Prefab Of Pipes And Box Collector
     {
-        transform.position += Vector3.left * WorldElementSpeed * Time.deltaTime;
-
-        if (transform.position.x < WorldleftEdge)
-        {
-            Destroy(gameObject);
-        }
+        GameObject WorldElements = Instantiate(prefab, transform.position, rotation); // Cloning the gameobject Written and setting it with position identity "
+        
     }
 }
