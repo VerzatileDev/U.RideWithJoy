@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
             iskilled = true;
             rb.bodyType = RigidbodyType2D.Static; // Deny Movement once Player has collided...
 
+            Debug.Log(" Player IS static now Yay");
         }
     }
 
