@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float JumpHeight = 3f;
     public static bool iskilled = false;
     //[SerializeField] AudioSource JumpSound;
@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -23,10 +23,21 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && iskilled == false)
         {
             rb.velocity = (Vector2.up * JumpHeight);  // Change later and add deltatime..
-            //if (!hopSound.isPlaying && iskilled == false && PauseMenu.GameIsPaused == false)
+            //if (!JumpSound.isPlaying && iskilled == false && PauseMenu.GameIsPaused == false)
             //{
-                //hopSound.Play(); // <-- Add Sound later
+                //JumpSound.Play(); // <-- Add Sound later
             //}
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            // Play sound .. Queue Here
+            iskilled = true;
+            rb.bodyType = RigidbodyType2D.Static; // Deny Movement once Player has collided...
+
         }
     }
 
