@@ -32,13 +32,15 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log(" Colliding ");
         if (other.gameObject.tag == "Obstacle")
         {
             // Play sound .. Queue Here
             iskilled = true;
-            rb.bodyType = RigidbodyType2D.Static; // Deny Movement once Player has collided...
+            rb.bodyType = RigidbodyType2D.Static; // can be removed later..
 
-            Debug.Log(" Player IS static now Yay");
+            Debug.Log(" Player Disabled ");
+            Time.timeScale = 0;
         }
     }
 
