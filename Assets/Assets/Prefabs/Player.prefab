@@ -157,4 +157,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2313595382835612452}
-  jetPower: 70
+  jetPower: 4000
