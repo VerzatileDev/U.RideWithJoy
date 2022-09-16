@@ -37,9 +37,12 @@ public class PlayerWithJetpack : MonoBehaviour
             Debug.Log(" Player Disabled ");
             Time.timeScale = 0;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.tag == "CoinCollected")
-       {
+        {
             FindObjectOfType<GameManager>().IncreaseScore(); // Find GameManager Script and Runs a component in there
             Destroy(other.gameObject); // Destroys the object touched
         }
