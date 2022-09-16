@@ -21,7 +21,7 @@ public class PlayerWithJetpack : MonoBehaviour
             
             rb.AddForce(new Vector2(0, finalpower));
             //Debug.Log(finalpower);
-            // If you are looking this in the future don't do this do something better just no time. 
+            // If you are looking this in the future don't do this, do something better just no time. 
         }
     }
 
@@ -36,6 +36,12 @@ public class PlayerWithJetpack : MonoBehaviour
 
             Debug.Log(" Player Disabled ");
             Time.timeScale = 0;
+        }
+
+        if (other.gameObject.tag == "CoinCollected")
+       {
+            FindObjectOfType<GameManager>().IncreaseScore(); // Find GameManager Script and Runs a component in there
+            Destroy(other.gameObject); // Destroys the object touched
         }
     }
 
