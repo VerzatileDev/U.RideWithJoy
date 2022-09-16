@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2313595382835612453}
   - component: {fileID: 2313595382835612452}
   - component: {fileID: 2313595382835612448}
+  - component: {fileID: 4741664764154408548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2313595382835612451}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb300b62f11efa5418571a69a4e287e1, type: 3}
   m_Name: 
@@ -143,3 +144,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &4741664764154408548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313595382835612451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa095011b765f91469ee3aa0c468333d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2313595382835612452}
+  jetPower: 70
