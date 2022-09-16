@@ -16,6 +16,5 @@ public class SpawnWorld : MonoBehaviour
     private void Spawn() // Spawns Prefab
     {
         GameObject WorldElements = Instantiate(prefab, transform.position, rotation); // Clone GameObject Fid GameObjects Position, set rotation "
-        
     }
 }
