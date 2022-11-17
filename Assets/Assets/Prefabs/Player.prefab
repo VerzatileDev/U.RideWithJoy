@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2313595382835612455}
   - component: {fileID: 2313595382835612454}
   - component: {fileID: 2313595382835612449}
-  - component: {fileID: 2313595382835612453}
   - component: {fileID: 2313595382835612452}
   - component: {fileID: 2313595382835612448}
   - component: {fileID: 4741664764154408548}
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2313595382835612451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2313595382835612453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313595382835612451}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb300b62f11efa5418571a69a4e287e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  JumpHeight: 9
 --- !u!50 &2313595382835612452
 Rigidbody2D:
   serializedVersion: 4
@@ -142,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 2.1}
   m_EdgeRadius: 0
 --- !u!114 &4741664764154408548
 MonoBehaviour:

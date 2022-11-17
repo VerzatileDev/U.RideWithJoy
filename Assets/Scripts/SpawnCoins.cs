@@ -3,9 +3,9 @@
 public class SpawnCoins : MonoBehaviour
 {
     public GameObject prefab;
-    public float SpawnDistance = 2f;
-    public float minHeight = 1f;
-    public float maxHeight = 9f;
+    [SerializeField] private float SpawnDistance = 2f;
+    [SerializeField] private float minHeight = 1f;
+    [SerializeField] private float maxHeight = 9f;
     Quaternion rotation = Quaternion.Euler(90, 0, 0); // Rotates the Object Before spawning.
 
     private void OnEnable()
