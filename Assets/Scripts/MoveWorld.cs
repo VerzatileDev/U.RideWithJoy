@@ -7,7 +7,7 @@ public class MoveWorld : MonoBehaviour
 
     private void Start()
     {
-        WorldleftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 60; // -1 pushing to make sure it goes off screen fully.
+        WorldleftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 70; // -1 pushing to make sure it goes off screen fully.
     }
 
     // Update Movement of the World !
