@@ -14,10 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a5d3b5150b6314c418046c744e811170
-  - enabled: 1
-    path: Assets/Example Stuff/ExampleScenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
-    path: Assets/JakeOfFolders/Menu.unity
-    guid: 44b7992506964e046b6ddfc9e3e4c669
   m_configObjects: {}
