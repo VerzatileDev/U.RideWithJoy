@@ -5,6 +5,7 @@ public class PlayerWithJetpack : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float jetPower = 40f;
     protected internal static bool iskilled = false;
+    private float timer = 0;
 
     private void Awake()
     {
@@ -14,6 +15,16 @@ public class PlayerWithJetpack : MonoBehaviour
     /*PLAYER JEYPACK MOVEMENT*/
     private void Update()
     {
+        if(iskilled == false)
+        {
+            timer += Time.deltaTime;
+            if(timer >1f)
+            {
+                FindObjectOfType<GameManager>().IncreaseDistance();
+                timer = 0;
+            }
+        }
+
         bool jetEnabled = Input.GetButton("Jump");
         if (jetEnabled)
         {
